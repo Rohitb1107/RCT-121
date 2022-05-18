@@ -1,8 +1,20 @@
-
 .main-div {
   display: flex;
-  gap: 2rem;
+  gap: 5rem;
+  /* border: 1px solid black; */
+  margin: 2rem;
+}
+
+.each-div {
   border: 1px solid black;
-  font-size: 2rem;
- margin: 1rem;
+  font-size: 1.5em;
+  background-color: aliceblue;
+}
+
+.card-title {
+  font-size: 1.5em;
+}
+
+a {
+  margin-top: 1.5em;
 }

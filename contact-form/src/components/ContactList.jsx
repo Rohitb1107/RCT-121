@@ -10,7 +10,7 @@ const ContactList = () => {
 
   return (
     <>
-      <div>
+      <div className="main-div">
         {Data.map((e) => (
           <ContactCard
             key={e.id}

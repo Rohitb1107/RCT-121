@@ -14,10 +14,20 @@ const ContactCard = (props) => {
 
   return (
     <>
-      <div onClick={DivClick} className="main-div">
-        <div>{props.name}</div>
-        <div>{props.email}</div>
-        {isClicked && <div>{props.phone}</div>}
+      <div className="each-div card" style={{ width: "18rem" }}>
+        <img
+          className="card-img-top"
+          src="https://www.teahub.io/photos/full/29-298297_avengers-endgame-thor-wallpaper-hd.jpg"
+          alt="Card image cap"
+        />
+        <div className="card-body">
+          <div className="card-title">{props.name}</div>
+          <div className="card-text">{props.email}</div>
+          {isClicked && <div>{props.phone}</div>}
+          <a href="#" onClick={DivClick} className="btn btn-primary">
+            Click to see more
+          </a>
+        </div>
       </div>
     </>
   );
