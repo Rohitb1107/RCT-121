@@ -8,15 +8,16 @@ const ContactCard = (props) => {
     setIsClicked(!isClicked);
   }
 
-  if (isClicked) {
-    return <div onClick={DivClick}>Clicked</div>;
-  }
+  //   if (isClicked) {
+  //     return <div onClick={DivClick}>Clicked</div>;
+  //   }
 
   return (
     <>
       <div onClick={DivClick} className="main-div">
         <div>{props.name}</div>
         <div>{props.email}</div>
+        {isClicked && <div>{props.phone}</div>}
       </div>
     </>
   );

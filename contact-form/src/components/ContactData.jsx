@@ -25,7 +25,7 @@ const UsersData = [
   },
   {
     id: 5,
-    name: "strange",
+    name: "Strange",
     email: "strange@gmail.com",
     phone: "8989865545",
   },

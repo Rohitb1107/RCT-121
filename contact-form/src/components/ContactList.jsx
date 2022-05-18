@@ -12,7 +12,12 @@ const ContactList = () => {
     <>
       <div>
         {Data.map((e) => (
-          <ContactCard key={e.id} name={e.name} email={e.email} />
+          <ContactCard
+            key={e.id}
+            name={e.name}
+            email={e.email}
+            phone={e.phone}
+          />
         ))}
       </div>
     </>
