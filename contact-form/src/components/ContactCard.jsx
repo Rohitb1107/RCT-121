@@ -3,7 +3,6 @@ import "./style.css";
 
 const ContactCard = (props) => {
   const [isClicked, setIsClicked] = useState(false);
-
   function DivClick() {
     setIsClicked(!isClicked);
   }
@@ -15,11 +14,7 @@ const ContactCard = (props) => {
   return (
     <>
       <div className="each-div card" style={{ width: "18rem" }}>
-        <img
-          className="card-img-top"
-          src="https://www.teahub.io/photos/full/29-298297_avengers-endgame-thor-wallpaper-hd.jpg"
-          alt="Card image cap"
-        />
+        {/* <img className="card-img-top" src={props.img} alt="Card image cap" /> */}
         <div className="card-body">
           <div className="card-title">{props.name}</div>
           <div className="card-text">{props.email}</div>

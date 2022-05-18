@@ -17,6 +17,7 @@ const ContactList = () => {
             name={e.name}
             email={e.email}
             phone={e.phone}
+            // img={e.img}
           />
         ))}
       </div>

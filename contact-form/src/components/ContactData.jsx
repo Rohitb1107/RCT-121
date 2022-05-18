@@ -1,8 +1,8 @@
 const UsersData = [
   {
     id: 1,
-    name: "Rohit",
-    email: "rohit@gmail.com",
+    name: "Tony",
+    email: "Tony@gmail.com",
     phone: "7954653245",
   },
   {
