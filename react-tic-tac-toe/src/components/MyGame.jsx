@@ -59,7 +59,7 @@ function MyGame() {
 
   return (
     <div className="app-header">
-      <p className="heading-text">React Tic Tac Toe - 2020</p>
+      <p className="heading-text">React Tic Tac Toe</p>
       <div className="row jc-center">
         <SquareComponent
           className="b-bottom-right"
