@@ -45,7 +45,7 @@ function GitData() {
         <GithubCard key={item.id} {...item} />
       ))}
       <div>
-        <button disabled={page === 1} onClick={() => setPage(page - 1)}>
+        <button className="btn" disabled={page === 1} onClick={() => setPage(page - 1)}>
           PREV
         </button>
         <button onClick={() => setPage(page + 1)}>NEXT</button>
@@ -57,7 +57,7 @@ function GitData() {
 const SearchBox = ({ handleClick }) => {
   const [text, setText] = useState("");
   return (
-    <div>
+    <div className="input-feild">
       <input
         type="text"
         value={text}

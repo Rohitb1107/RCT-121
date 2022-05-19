@@ -67,3 +67,19 @@ h2 {
   color: white;
   font-size: 2rem;
 }
+
+.input-feild input {
+  width: 15rem;
+  height: 2rem;
+}
+
+.input-feild button {
+  width: 5rem;
+  height: 2.4rem;
+  font-size: 1rem;
+  margin-left: 3.5rem;
+}
+
+.btn {
+  margin-top: 2rem;
+}
