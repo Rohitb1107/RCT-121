@@ -1,11 +1,11 @@
 import { useState } from "react";
 import "./App.css";
+import GitData from "./Components/GitData";
 
 function App() {
-
   return (
     <div className="App">
-      <h1>Hello, World!</h1>
+      <GitData />
     </div>
   );
 }

@@ -36,7 +36,34 @@
     transform: rotate(360deg);
   }
 }
-
+body {
+  background-color: #101820ff;
+}
 button {
   font-size: calc(10px + 2vmin);
+}
+
+.git-card {
+  display: flex;
+  gap: 2rem;
+  text-align: center;
+  align-items: center;
+  border: 1px solid black;
+  width: 20vw;
+  margin-bottom: 2rem;
+  background-color: #f2aa4cff;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.git-card img {
+  width: 100px;
+}
+
+.git-card div {
+  font-size: 2rem;
+}
+h2 {
+  color: white;
+  font-size: 2rem;
 }
