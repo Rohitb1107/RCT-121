@@ -9,8 +9,8 @@
   height: 19vh;
   display: grid;
   grid-template-columns: auto auto;
-  background-color: #00203fff;
-  color: #adefd1ff;
+  background-color: #89abe3ff;
+  color: #fcf6f5ff;
 }
 
 .card img {
