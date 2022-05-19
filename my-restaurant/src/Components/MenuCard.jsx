@@ -2,6 +2,11 @@ import React, { useState, useEffect } from "react";
 import "./style.css";
 
 const MenuCard = () => {
+  function SaySomething() {
+    console.log(
+      "Good Night Rohit Take Care You are a very good boy and you definately get an amazing job offer Best of luck for your future"
+    );
+  }
   return (
     <>
       <h1>MenuCard</h1>
@@ -31,7 +36,7 @@ const MenuCard = () => {
           <button>Add to cart</button>
         </div>
         <div className="order-part">
-          <button>Order Now</button>
+          <button onClick={SaySomething}>Order Now</button>
         </div>
       </div>
     </>
