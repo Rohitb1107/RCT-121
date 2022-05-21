@@ -9,12 +9,13 @@ function App() {
   const [error, setError] = useState(false);
   const [data, setData] = useState([]);
   const [page, setPage] = useState(1);
+  const [ratingOrder, setRatingOrder] = useState("asc");
 
   useEffect(() => {
-    fetchData(page);
-  }, [page]);
+    fetchData(page, ratingOrder);
+  }, [page, ratingOrder]);
 
-  const fetchData = async (page) => {
+  const fetchData = async (page, ratingOrder) => {
     setLoading(true);
     axios({
       method: "get",
@@ -22,6 +23,8 @@ function App() {
       params: {
         _page: page,
         _limit: 5,
+        _sort: "rating",
+        _order: ratingOrder,
       },
     })
       .then((res) => {
@@ -38,6 +41,20 @@ function App() {
     <div className="App">
       <h1>My Restaurants</h1>
       {loading && <div>Loading...</div>}
+      <div className="sort-div">
+        <button
+          disabled={ratingOrder === "desc"}
+          onClick={() => setRatingOrder("desc")}
+        >
+          SORT BY DESC 
+        </button>
+        <button
+          disabled={ratingOrder === "asc"}
+          onClick={() => setRatingOrder("asc")}
+        >
+          SORT BY ASC
+        </button>
+      </div>
       {data.map((item) => {
         return <MenuCard key={item.id} {...item} />;
       })}
