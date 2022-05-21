@@ -1,10 +1,11 @@
-import { useState } from "react";
+import React, { useState, useEffect } from 'react';
 import "./App.css";
 import MenuCard from "./Components/MenuCard";
 
 function App() {
-  const [count, setCount] = useState(0);
-
+useEffect(() => {
+  
+})
   return (
     <div className="App">
       <MenuCard />
