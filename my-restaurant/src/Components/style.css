@@ -6,11 +6,9 @@
 .card {
   border: 1px solid black;
   width: 25vw;
-  height: 19vh;
   display: grid;
   grid-template-columns: auto auto;
-  background-color: #89abe3ff;
-  color: #fcf6f5ff;
+  margin: 4rem;
 }
 
 .card img {
@@ -24,10 +22,11 @@
 
 .right-part {
   margin: 1rem 0.1rem 0 0;
+  line-height: 1.2rem;
 }
 .right-in-left-part {
   margin-left: 0.5rem;
-  line-height: 1.5rem;
+  line-height: 1.6rem;
 }
 
 .order-part {
