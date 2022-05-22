@@ -2,3 +2,7 @@
 * {
   font-family: "Ubuntu", sans-serif;
 }
+.App {
+  margin: auto;
+  text-align: center;
+}
