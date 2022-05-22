@@ -10,12 +10,13 @@ function App() {
   const [data, setData] = useState([]);
   const [page, setPage] = useState(1);
   const [ratingOrder, setRatingOrder] = useState("asc");
+  const [costOrder, setCostOrder] = useState("asc");
 
   useEffect(() => {
     fetchData(page, ratingOrder);
-  }, [page, ratingOrder]);
+  }, [page, ratingOrder, costOrder]);
 
-  const fetchData = async (page, ratingOrder) => {
+  const fetchData = async (page, ratingOrder, costOrder) => {
     setLoading(true);
     axios({
       method: "get",
@@ -23,8 +24,8 @@ function App() {
       params: {
         _page: page,
         _limit: 5,
-        _sort: "rating",
-        _order: ratingOrder,
+        _sort: "rating,cost",
+        _order: `${ratingOrder},${costOrder}`,
       },
     })
       .then((res) => {
@@ -43,16 +44,30 @@ function App() {
       {loading && <div>Loading...</div>}
       <div className="sort-div">
         <button
+          disabled={costOrder === "desc"}
+          onClick={() => setCostOrder("desc")}
+        >
+          COST SORT BY DESC
+        </button>
+        <button
+          disabled={costOrder === "asc"}
+          onClick={() => setCostOrder("asc")}
+        >
+          COST SORT BY ASC
+        </button>
+      </div>
+      <div>
+        <button
           disabled={ratingOrder === "desc"}
           onClick={() => setRatingOrder("desc")}
         >
-          SORT BY DESC
+          RATING SORT BY DESC
         </button>
         <button
           disabled={ratingOrder === "asc"}
           onClick={() => setRatingOrder("asc")}
         >
-          SORT BY ASC
+          RATING SORT BY ASC
         </button>
       </div>
       {data.map((item) => {
