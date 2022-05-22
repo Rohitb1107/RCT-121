@@ -9,6 +9,8 @@
   display: grid;
   grid-template-columns: auto auto;
   margin: 4rem;
+  margin: auto;
+  margin-top: 2rem;
 }
 
 .card img {
