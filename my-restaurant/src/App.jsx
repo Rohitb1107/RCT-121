@@ -46,7 +46,7 @@ function App() {
           disabled={ratingOrder === "desc"}
           onClick={() => setRatingOrder("desc")}
         >
-          SORT BY DESC 
+          SORT BY DESC
         </button>
         <button
           disabled={ratingOrder === "asc"}
