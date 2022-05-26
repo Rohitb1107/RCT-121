@@ -1,11 +1,11 @@
 import { useState } from "react";
 import "./App.css";
-import Flex from "./Components/Flex";
+import FlexFunc from "./Components/FlexFunc";
 
 function App() {
   return (
     <div className="App">
-      <Flex />
+      <FlexFunc />
     </div>
   );
 }
