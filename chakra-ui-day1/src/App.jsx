@@ -6,8 +6,8 @@ import GridFunc from "./Components/GridFunc";
 function App() {
   return (
     <div className="App">
-      {/* <FlexFunc /> */}
-      <GridFunc />
+      <FlexFunc />
+      {/* <GridFunc /> */}
     </div>
   );
 }
