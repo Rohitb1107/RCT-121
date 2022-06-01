@@ -5,13 +5,13 @@ export const AppContext = React.createContext();
 const AppContextProvider = ({ children }) => {
   const [state, setState] = useState("light");
 
-  const changeTheme = (theme) => {
+  const changeTheme = () => {
     state === "light" ? setState("dark") : setState("light");
   };
 
   return (
     <AppContext.Provider value={[state, changeTheme]}>
-      <div>AppContextProvider</div>
+      {children}
     </AppContext.Provider>
   );
 };
