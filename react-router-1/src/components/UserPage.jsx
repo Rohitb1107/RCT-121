@@ -5,15 +5,17 @@ import { Link, useParams } from "react-router-dom";
 const Users = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const params = useParams();
 
   useEffect(() => {
     setLoading(true);
     GetData();
-  }, []);
+  }, [params.user_id]);
 
   function GetData() {
+    const { id } = params;
     axios({
-      url: `https://reqres.in/api/users`,
+      url: `https://reqres.in/api/users/${params.user_id}`,
       method: "GET",
     })
       .then((res) => {
@@ -29,15 +31,11 @@ const Users = () => {
   return (
     <>
       {loading && <div>Loading...</div>}
-      {data.map((item) => {
-        return (
-          <div style={{ marginBottom: "1rem" }} key={item.id}>
-            <div>{item.email}</div>
-            <div>{item.first_name}</div>
-            <Link to={`/users/${item.id}`}>See more</Link>
-          </div>
-        );
-      })}
+
+      {/* <div style={{ marginBottom: "1rem" }} key={data.data.id}>
+        <div>{data.data.email}</div>
+        <div>{data.data.first_name}</div>
+      </div> */}
     </>
   );
 };
