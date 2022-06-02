@@ -1,12 +1,19 @@
 import React, { useContext } from "react";
 import { AppContext } from "../context/AppContextProvider";
+import "Button.jsx";
 
 const ButtonCompo = (props) => {
   const [theme] = useContext(AppContext);
-  console.log(context);
+
   return (
     <div>
-      <button>{props.text}</button>
+      <button
+        className={`${style.buttonBase} ${
+          theme === "Light" ? style.buttonLight : style.buttonDark
+        }`}
+      >
+        {props.text}
+      </button>
     </div>
   );
 };
