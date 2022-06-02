@@ -9,9 +9,8 @@ const Users = () => {
 
   useEffect(() => {
     setLoading(true);
-    const { id } = params;
     axios({
-      url: `https://reqres.in/api/users/${id}`,
+      url: `https://reqres.in/api/users/${params.id}`,
       method: "GET",
     })
       .then((res) => {
@@ -31,7 +30,7 @@ const Users = () => {
     <>
       {loading && <div>Loading...</div>}
 
-      <div style={{ marginBottom: "1rem" }} key={data.id}>
+      <div style={{ marginBottom: "1rem" }}>
         <img width={75} src={data.avatar} alt="icon" />
         <div>Email:{data.email}</div>
         <div>First Name:{data.first_name}</div>
