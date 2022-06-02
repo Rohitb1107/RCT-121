@@ -16,7 +16,6 @@ const Users = () => {
       .then((res) => {
         setLoading(false);
         setData(res.data.data);
-        console.log(res.data);
       })
       .catch((err) => {
         setLoading(false);
@@ -24,7 +23,6 @@ const Users = () => {
       });
   }, [params.id]);
 
-  console.log(data);
 
   return (
     <>
