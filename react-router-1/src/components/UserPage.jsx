@@ -9,33 +9,34 @@ const Users = () => {
 
   useEffect(() => {
     setLoading(true);
-    GetData();
-  }, [params.user_id]);
-
-  function GetData() {
     const { id } = params;
     axios({
-      url: `https://reqres.in/api/users/${params.user_id}`,
+      url: `https://reqres.in/api/users/${id}`,
       method: "GET",
     })
       .then((res) => {
         setLoading(false);
         setData(res.data.data);
-        console.log(res.data.data);
+        console.log(res.data);
       })
       .catch((err) => {
         setLoading(false);
         console.log(err);
       });
-  }
+  }, [params.id]);
+
+  console.log(data);
+
   return (
     <>
       {loading && <div>Loading...</div>}
 
-      {/* <div style={{ marginBottom: "1rem" }} key={data.data.id}>
-        <div>{data.data.email}</div>
-        <div>{data.data.first_name}</div>
-      </div> */}
+      <div style={{ marginBottom: "1rem" }} key={data.id}>
+        <img width={75} src={data.avatar} alt="icon" />
+        <div>Email:{data.email}</div>
+        <div>First Name:{data.first_name}</div>
+        <div>Last Name: {data.last_name}</div>
+      </div>
     </>
   );
 };
