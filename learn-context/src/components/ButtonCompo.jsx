@@ -1,15 +1,15 @@
 import React, { useContext } from "react";
 import { AppContext } from "../context/AppContextProvider";
-import "Button.jsx";
+import style from "./Button.css";
 
-const ButtonCompo = (props) => {
+const ButtonCompo = ({ text, onClick }) => {
   const [theme] = useContext(AppContext);
 
   return (
     <div>
       <button
         className={`${style.buttonBase} ${
-          theme === "Light" ? style.buttonLight : style.buttonDark
+          theme === "light" ? style.buttonLight : style.buttonDark
         }`}
       >
         {props.text}
