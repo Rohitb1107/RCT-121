@@ -4,13 +4,14 @@ export const AppContext = React.createContext();
 
 const AppContextProvider = ({ children }) => {
   const [state, setState] = useState("light");
+  const [name, setName] = useState("Rohit");
 
-  const changeTheme = () => {
+  const toggleTheme = () => {
     state === "light" ? setState("dark") : setState("light");
   };
 
   return (
-    <AppContext.Provider value={[state, changeTheme]}>
+    <AppContext.Provider value={[state, name, toggleTheme]}>
       {children}
     </AppContext.Provider>
   );

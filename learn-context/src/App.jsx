@@ -1,16 +1,19 @@
 import React, { useState, useEffect, useContext } from "react";
 import "./App.css";
 import ButtonCompo from "./components/ButtonCompo";
-import AppContext from "./context/AppContextProvider";
-
+import { AppContext } from "./context/AppContextProvider";
+import Test from "./components/Test";
 function App() {
-  const [theme, changeTheme] = useContext(AppContext);
+  const [state, toggleTheme] = useContext(AppContext);
+
   return (
     <div className="App">
-      <h1>Context API</h1>
+      {/* <h1>Context API</h1>
       <ButtonCompo text="Theme" />
+      <br />
+      <button onClick={toggleTheme}>Toggle theme</button> */}
 
-      <button onClick={changeTheme}>Toggle</button>
+      <Test />
     </div>
   );
 }
