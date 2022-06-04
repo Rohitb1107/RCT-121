@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
+// import { AuthContext } from "../Context/AuthContext";
 
 const Users = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
+  // const [isAuth] = useContext(AuthContext);
 
   useEffect(() => {
     setLoading(true);
@@ -26,6 +28,11 @@ const Users = () => {
         console.log(err);
       });
   }
+
+  // if (!isAuth) {
+  //   return <div>Not authenticated</div>;
+  // }
+  
   return (
     <>
       {loading && <div>Loading...</div>}
