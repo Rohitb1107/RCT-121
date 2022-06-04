@@ -7,6 +7,7 @@ import Users from "./Users";
 import UserPage from "./UserPage";
 import Login from "./Login";
 import { Routes, Route } from "react-router-dom";
+import PrivateRoute from "./PrivateRoute";
 
 const AllRoutes = () => {
   return (
@@ -16,7 +17,14 @@ const AllRoutes = () => {
         <Route path="/" element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
-        <Route path="/users" element={<Users />}></Route>
+        <Route
+          path="/users"
+          element={
+            <PrivateRoute>
+              <Users />
+            </PrivateRoute>
+          }
+        ></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/users/:id" element={<UserPage />}></Route>
       </Routes>
