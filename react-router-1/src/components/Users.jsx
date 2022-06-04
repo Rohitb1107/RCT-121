@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
-import { Link, useParams } from "react-router-dom";
+import { Link, Navigate, useParams } from "react-router-dom";
 import { AuthContext } from "../Context/AuthContext";
 
 const Users = () => {
@@ -30,7 +30,7 @@ const Users = () => {
   }
 
   if (!isAuth) {
-    return <div>Not authenticated</div>;
+    return <Navigate to="/login" />;
   }
 
   return (
