@@ -10,11 +10,17 @@ function reducer(state, action) {
     return {
       ...state,
       counter: state.counter + 1,
+      clicks: state.clicks + 1,
     };
   } else if (action.type === "DECREMENT") {
     return {
       ...state,
       counter: state.counter - 1,
+      clicks: state.clicks + 1,
+    };
+  } else if (action.type === "RESET") {
+    return {
+      ...initialState,
     };
   }
   return state;
@@ -27,8 +33,10 @@ const Counter = () => {
     <>
       <div>
         <h1>{state.counter}</h1>
+        <h1>{state.clicks}</h1>
         <button onClick={() => dispatch({ type: "INCREMENT" })}>Add</button>
         <button onClick={() => dispatch({ type: "DECREMENT" })}>Remove</button>
+        <button onClick={() => dispatch({ type: "RESET" })}>Reset</button>
       </div>
     </>
   );
