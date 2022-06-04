@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useState, useContext } from "react";
+import { Navigate } from "react-router-dom";
+import { AuthContext } from "../Context/AuthContext";
 
 const Login = () => {
-  return (
-    <div>Login</div>
-  )
-}
+  const [isAuth, setIsAuth] = useContext(AuthContext);
 
-export default Login
+  if (isAuth) {
+    return <Navigate to="/" />;
+  }
+
+  return (
+    <div>
+      <h1>Login</h1>
+      <button onClick={() => setIsAuth(true)}>Login</button>
+    </div>
+  );
+};
+
+export default Login;
