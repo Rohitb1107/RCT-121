@@ -30,7 +30,7 @@ const Login = () => {
   return (
     <div>
       <h1>Login</h1>
-      <button onClick={() => setIsAuth(true)}>Login</button>
+      <button onClick={loginUser}>Login</button>
     </div>
   );
 };
