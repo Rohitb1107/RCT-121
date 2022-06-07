@@ -35,6 +35,8 @@ a {
 .card {
   margin: auto;
   margin-top: 1rem;
+  border: 0;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .products-div {
@@ -62,21 +64,34 @@ a {
 .product-page {
   display: flex;
   margin: auto;
-  border: 1px solid black;
   width: 50%;
   margin-top: 3rem;
+  background-color: aliceblue;
+  padding: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 .left-part {
-  border: 1px solid black;
   width: 60%;
 }
 
 .right-part {
-  border: 1px solid black;
   width: 40%;
-  justify-items: center;
+  text-align: center;
+  display: flex;
+  gap: 1.1em;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.right-part button {
+  width: 200px;
+  margin-left: 6rem;
 }
 
 .left-part img {
   width: 500px;
+}
+.single-prod-img {
+  margin-top: 2rem;
 }

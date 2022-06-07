@@ -1,6 +1,9 @@
 import React from "react";
+import { Link, useParams } from "react-router-dom";
+
 
 const Products = (props) => {
+
   return (
     <>
       <div className="products-div">
@@ -17,9 +20,9 @@ const Products = (props) => {
               <p>Price: {props.price}</p>
               <p>Rating: {props.rating.rate}</p>
             </div>
-            <a href="#" className="btn btn-primary">
-              Buy Now
-            </a>
+            <Link to={`/products/${props.id}`}>
+              <button className="btn btn-primary">Buy now</button>
+            </Link>
           </div>
         </div>
       </div>
