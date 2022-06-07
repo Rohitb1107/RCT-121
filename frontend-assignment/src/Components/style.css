@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar css */
+.nav-li {
+  display: flex;
+  gap: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Home css */
+.slide-img {
+  width: 200px;
+}
+/* .sr-only {
+  color: black;
+  font-weight: bolder;
+  font-size: 1.5rem;
+} */

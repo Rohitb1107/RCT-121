@@ -1,10 +1,11 @@
 import { useState } from "react";
 import "./App.css";
+import AllRoutes from "./Components/AllRoutes";
 
 function App() {
   return (
     <div className="App">
-      <h1>Frontend assignment</h1>
+      <AllRoutes />
     </div>
   );
 }
