@@ -4,7 +4,7 @@ import { Navigate } from "react-router-dom";
 import { AuthContext } from "../Context/AuthContext";
 
 const Login = () => {
-  const [isAuth, setIsAuth] = useContext(AuthContext);
+  const [state, dispatch] = useContext(AuthContext);
 
   const loginUser = async () => {
     axios({
@@ -17,13 +17,17 @@ const Login = () => {
     })
       .then((res) => {
         alert("Success");
+        dispatch({
+          type: "LOGIN_SUCCESS",
+          payload: res.data.token,
+        });
       })
       .catch((err) => {
         alert("Login failed");
       });
   };
 
-  if (isAuth) {
+  if (state.isAuth) {
     return <Navigate to="/" />;
   }
 

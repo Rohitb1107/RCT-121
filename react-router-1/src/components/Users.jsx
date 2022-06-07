@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { Link, Navigate, useParams } from "react-router-dom";
-// import { AuthContext } from "../Context/AuthContext";
+import { AuthContext } from "../Context/AuthContext";
 
 const Users = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
-  // const [isAuth] = useContext(AuthContext);
+  const [state] = useContext(AuthContext);
 
   useEffect(() => {
     setLoading(true);
@@ -29,9 +29,9 @@ const Users = () => {
       });
   }
 
-
   return (
     <>
+      {state.token && <h3>Token: {token}</h3>}
       {loading && <div>Loading...</div>}
       {data.map((item) => {
         return (
