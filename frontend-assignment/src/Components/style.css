@@ -18,14 +18,24 @@ a {
 .slide-img {
   width: 200px;
 }
-/* .sr-only {
-  color: black;
-  font-weight: bolder;
-  font-size: 1.5rem;
-} */
+
+.home-div {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
 
 /* product css */
 .prod-img {
   width: 200px;
   height: 200px;
+}
+
+.card {
+  margin: auto;
+  margin-top: 1rem;
+}
+
+.products-div {
+  margin: auto;
+  text-align: center;
 }
