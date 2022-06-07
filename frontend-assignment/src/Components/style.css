@@ -95,3 +95,7 @@ a {
 .single-prod-img {
   margin-top: 2rem;
 }
+.pagination-div {
+  width: 20%;
+  margin: auto;
+}

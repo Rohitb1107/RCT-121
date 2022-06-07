@@ -3,7 +3,6 @@ import { Link, useParams } from "react-router-dom";
 
 
 const Products = (props) => {
-
   return (
     <>
       <div className="products-div">
