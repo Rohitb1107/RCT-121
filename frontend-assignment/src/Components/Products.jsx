@@ -12,11 +12,11 @@ const Products = (props) => {
           />
           <div className="card-body">
             <h5 className="card-title">{props.title}</h5>
-            <p className="card-text">{props.decription}</p>
-            <span>
+            {/* <p className="card-text">{props.description}</p> */}
+            <div className="price-div">
               <p>Price: {props.price}</p>
-              <p>Rating: {props.rate}</p>
-            </span>
+              <p>Rating: {props.rating.rate}</p>
+            </div>
             <a href="#" className="btn btn-primary">
               Buy Now
             </a>

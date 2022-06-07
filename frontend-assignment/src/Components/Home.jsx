@@ -19,8 +19,8 @@ const Home = () => {
 
   return (
     <>
+      <Slider />
       <div className="home-div">
-        {/* <Slider /> */}
         {prodData.map((item) => {
           return <Products key={item.id} {...item} />;
         })}

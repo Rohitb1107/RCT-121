@@ -22,12 +22,14 @@ a {
 .home-div {
   display: grid;
   grid-template-columns: auto auto auto auto;
+  background-color: aliceblue;
 }
 
 /* product css */
 .prod-img {
   width: 200px;
   height: 200px;
+  margin: auto;
 }
 
 .card {
@@ -38,4 +40,43 @@ a {
 .products-div {
   margin: auto;
   text-align: center;
+  margin-top: 3rem;
+}
+
+.price-div {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.price-div p {
+  font-weight: bold;
+}
+
+.card-body {
+  background-color: #adefd1ff;
+  color: #00203fff;
+}
+
+/* sigle prod css */
+.product-page {
+  display: flex;
+  margin: auto;
+  border: 1px solid black;
+  width: 50%;
+  margin-top: 3rem;
+}
+.left-part {
+  border: 1px solid black;
+  width: 60%;
+}
+
+.right-part {
+  border: 1px solid black;
+  width: 40%;
+  justify-items: center;
+}
+
+.left-part img {
+  width: 500px;
 }
