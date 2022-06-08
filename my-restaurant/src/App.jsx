@@ -20,7 +20,7 @@ function App() {
     setLoading(true);
     axios({
       method: "get",
-      url: "http://localhost:8080/food",
+      url: "http://188.166.98.109:5000/str",
       params: {
         _page: page,
         _limit: 5,
