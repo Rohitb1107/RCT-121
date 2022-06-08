@@ -25,6 +25,10 @@ a {
   background-color: aliceblue;
 }
 
+.page-btn button {
+  margin-top: 2rem;
+}
+
 /* product css */
 .prod-img {
   width: 200px;
@@ -98,4 +102,11 @@ a {
 .pagination-div {
   width: 20%;
   margin: auto;
+}
+
+.page-btn-grp button {
+  padding: 0.5em;
+  margin-left: 0.4rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }

@@ -1,7 +1,7 @@
 const Pagination = ({ currentPage, lastPage, onPageChange }) => {
     const arr = new Array(lastPage).fill(0);
     return (
-      <div>
+      <div className="page-btn-grp">
         {arr.map((item, page) => (
           <button
             onClick={() => onPageChange(page + 1)}

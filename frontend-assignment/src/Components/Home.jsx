@@ -44,7 +44,7 @@ const Home = () => {
           role="toolbar"
           aria-label="Toolbar with button groups"
         >
-          <div className="btn-group mr-2" role="group" aria-label="First group">
+          <div className="page-btn btn-group mr-2" role="group" aria-label="First group">
             <button
               type="button"
               className="btn btn-secondary"
