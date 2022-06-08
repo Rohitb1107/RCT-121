@@ -17,7 +17,7 @@ const Home = () => {
     fetchData({ page, ratingOrder, costOrder });
   }, [page, ratingOrder, costOrder]);
 
-  const fetchData = async (page, ratingOrder, costOrder) => {
+  const fetchData = async ({ page, ratingOrder, costOrder }) => {
     setLoading(true);
     axios({
       method: "get",
@@ -49,19 +49,19 @@ const Home = () => {
         <div className="filter-div">
           <div className="sort-div">
             <button
-              disabled={costOrder === "desc"}
-              onClick={() => setCostOrder("desc")}
-            >
-              COST SORT BY DESC
-            </button>
-            <button
               disabled={costOrder === "asc"}
               onClick={() => setCostOrder("asc")}
             >
               COST SORT BY ASC
             </button>
+            <button
+              disabled={costOrder === "desc"}
+              onClick={() => setCostOrder("desc")}
+            >
+              COST SORT BY DESC
+            </button>
           </div>
-          <div>
+          <div className="sort-div-2">
             <button
               disabled={ratingOrder === "asc"}
               onClick={() => setRatingOrder("asc")}
