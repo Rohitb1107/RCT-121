@@ -144,3 +144,8 @@ a {
 .sort-div-2 {
   background-color: rgb(245, 182, 123);
 }
+.filter-cate button {
+  margin-left: 4.6rem;
+  background-color: #d383d6;
+  border: 0;
+}

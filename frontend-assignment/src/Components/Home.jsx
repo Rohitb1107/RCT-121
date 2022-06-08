@@ -13,6 +13,13 @@ const Home = () => {
   const [ratingOrder, setRatingOrder] = useState("asc");
   const [costOrder, setCostOrder] = useState("asc");
 
+  const filterItem = (cateItem) => {
+    const updateItems = prodData.filter((currItem) => {
+      return currItem.category === cateItem;
+    });
+    setProdData(updateItems);
+  };
+
   useEffect(() => {
     fetchData({ page, ratingOrder, costOrder });
   }, [page, ratingOrder, costOrder]);
@@ -73,6 +80,35 @@ const Home = () => {
               onClick={() => setRatingOrder("desc")}
             >
               RATING SORT BY DESC
+            </button>
+          </div>
+        </div>
+        {/* 2ndiv */}
+        <div className="filter-div">
+          <div className="sort-div filter-cate">
+            <button
+              className="btn btn-warning"
+              onClick={() => filterItem("men's clothing")}
+            >
+              Men's clothing
+            </button>
+            <button
+              className="btn btn-warning"
+              onClick={() => filterItem("women's clothing")}
+            >
+              Women's clothing
+            </button>
+            <button
+              className="btn btn-warning"
+              onClick={() => filterItem("electronics")}
+            >
+              Electronics
+            </button>
+            <button
+              className="btn btn-warning"
+              onClick={() => filterItem("jewelery")}
+            >
+              Jewelery
             </button>
           </div>
         </div>
