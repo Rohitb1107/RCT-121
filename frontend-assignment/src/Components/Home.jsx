@@ -43,7 +43,7 @@ const Home = () => {
 
   return (
     <>
-      {/* <Slider /> */}
+      <Slider />
       <div className="home-div">
         {loading && <div>Loading...</div>}
         <div className="filter-div">

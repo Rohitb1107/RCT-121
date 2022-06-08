@@ -8,7 +8,12 @@
   display: flex;
   gap: 1.5rem;
 }
-
+.navbar {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  padding-bottom: 1rem;
+}
 a {
   text-decoration: none;
   color: black;
@@ -101,8 +106,9 @@ a {
   margin-top: 2rem;
 }
 .pagination-div {
-  width: 20%;
+  width: 10%;
   margin: auto;
+
 }
 
 .page-btn-grp button {
@@ -113,10 +119,14 @@ a {
 }
 
 .filter-div {
-  border: 1px solid black;
-  width: 50vw;
+  width: 41vw;
+  border: 0;
   margin: auto;
   display: flex;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  padding-top: 1rem;
 }
 
 .filter-div button {

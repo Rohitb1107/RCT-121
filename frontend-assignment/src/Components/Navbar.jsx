@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <>
       <div className="nav-div">
-        <nav className="navbar navbar-expand-lg bg-light">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container-fluid">
             <a className="navbar-brand" href="#">
               My Ecommerce
