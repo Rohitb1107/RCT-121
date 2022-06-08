@@ -13,7 +13,7 @@ function App() {
   const [costOrder, setCostOrder] = useState("asc");
 
   useEffect(() => {
-    fetchData(page, ratingOrder);
+    fetchData({ page, ratingOrder, costOrder });
   }, [page, ratingOrder, costOrder]);
 
   const fetchData = async (page, ratingOrder, costOrder) => {

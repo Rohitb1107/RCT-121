@@ -20,11 +20,12 @@ a {
 }
 
 .home-div {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
   background-color: aliceblue;
 }
-
+.products-div-2 {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
 .page-btn button {
   margin-top: 2rem;
 }
@@ -109,4 +110,18 @@ a {
   margin-left: 0.4rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
+}
+
+.filter-div {
+  border: 1px solid black;
+  width: 100vw;
+}
+
+.filter-div button {
+  background-color: #13aa52;
+  border: 1px solid #13aa52;
+  border-radius: 4px;
+  color: #fff;
+  padding: 0.2rem;
+  margin: 1rem;
 }

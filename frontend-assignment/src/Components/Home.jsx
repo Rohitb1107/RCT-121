@@ -3,6 +3,7 @@ import Products from "./Products";
 import Slider from "./Slider";
 import axios from "axios";
 import Pagination from "./Pagination";
+import { useParams } from "react-router-dom";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -13,7 +14,7 @@ const Home = () => {
   const [costOrder, setCostOrder] = useState("asc");
 
   useEffect(() => {
-    fetchData(page, ratingOrder);
+    fetchData({ page, ratingOrder, costOrder });
   }, [page, ratingOrder, costOrder]);
 
   const fetchData = async (page, ratingOrder, costOrder) => {
@@ -24,7 +25,7 @@ const Home = () => {
       params: {
         _page: page,
         _limit: 8,
-        _sort: "rating,cost",
+        _sort: "rating.rate,price",
         _order: `${ratingOrder},${costOrder}`,
       },
     })
@@ -42,41 +43,44 @@ const Home = () => {
 
   return (
     <>
-      <Slider />
+      {/* <Slider /> */}
       <div className="home-div">
         {loading && <div>Loading...</div>}
-        <div className="sort-div">
-          <button
-            disabled={costOrder === "desc"}
-            onClick={() => setCostOrder("desc")}
-          >
-            COST SORT BY DESC
-          </button>
-          <button
-            disabled={costOrder === "asc"}
-            onClick={() => setCostOrder("asc")}
-          >
-            COST SORT BY ASC
-          </button>
+        <div className="filter-div">
+          <div className="sort-div">
+            <button
+              disabled={costOrder === "desc"}
+              onClick={() => setCostOrder("desc")}
+            >
+              COST SORT BY DESC
+            </button>
+            <button
+              disabled={costOrder === "asc"}
+              onClick={() => setCostOrder("asc")}
+            >
+              COST SORT BY ASC
+            </button>
+          </div>
+          <div>
+            <button
+              disabled={ratingOrder === "asc"}
+              onClick={() => setRatingOrder("asc")}
+            >
+              RATING SORT BY ASC
+            </button>
+            <button
+              disabled={ratingOrder === "desc"}
+              onClick={() => setRatingOrder("desc")}
+            >
+              RATING SORT BY DESC
+            </button>
+          </div>
         </div>
-        <div>
-          <button
-            disabled={ratingOrder === "desc"}
-            onClick={() => setRatingOrder("desc")}
-          >
-            RATING SORT BY DESC
-          </button>
-          <button
-            disabled={ratingOrder === "asc"}
-            onClick={() => setRatingOrder("asc")}
-          >
-            RATING SORT BY ASC
-          </button>
+        <div className="products-div-2">
+          {prodData.map((item) => {
+            return <Products key={item.id} {...item} />;
+          })}
         </div>
-
-        {prodData.map((item) => {
-          return <Products key={item.id} {...item} />;
-        })}
       </div>
 
       <div className="pagination-div">
