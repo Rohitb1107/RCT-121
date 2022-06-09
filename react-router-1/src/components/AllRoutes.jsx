@@ -6,8 +6,8 @@ import Contact from "./Contact";
 import Users from "./Users";
 import UserPage from "./UserPage";
 import Login from "./Login";
-import { Routes, Route } from "react-router-dom";
 import PrivateRoute from "./PrivateRoute";
+import { Routes, Route } from "react-router-dom";
 
 const AllRoutes = () => {
   return (

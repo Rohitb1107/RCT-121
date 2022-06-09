@@ -1,10 +1,11 @@
 import axios from "axios";
 import React, { useState, useContext } from "react";
-import { Navigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Context/AuthContext";
 
 const Login = () => {
   const [state, dispatch] = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const loginUser = async () => {
     axios({
@@ -21,6 +22,7 @@ const Login = () => {
           type: "LOGIN_SUCCESS",
           payload: res.data.token,
         });
+        navigate("/users");
       })
       .catch((err) => {
         alert("Login failed");
