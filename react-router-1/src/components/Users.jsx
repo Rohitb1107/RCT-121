@@ -31,7 +31,7 @@ const Users = () => {
 
   return (
     <>
-      {state.token && <h3>Token: {token}</h3>}
+      {state.token && <h3>Token: {state.token}</h3>}
       {loading && <div>Loading...</div>}
       {data.map((item) => {
         return (

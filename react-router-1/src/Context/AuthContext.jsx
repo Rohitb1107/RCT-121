@@ -30,11 +30,11 @@ const authReducer = (state, action) => {
 };
 
 const AuthContextProvider = ({ children }) => {
-  const [state, dispath] = useReducer(authReducer, initialState);
+  const [state, dispatch] = useReducer(authReducer, initialState);
 
   return (
     <div>
-      <AuthContext.Provider value={[state, dispath]}>
+      <AuthContext.Provider value={[state, dispatch]}>
         {children}
       </AuthContext.Provider>
     </div>
